@@ -4,19 +4,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Randoms randoms = new Randoms(30, 100);
-
-        int counter = 0;
-
-        while (true) {
-            if (randoms.addNumber() == 100) {
-                System.out.println("Выпало число 100, цикл завершен!");
+        for (int r : new Randoms(30, 100)) {
+            System.out.println("Случайное число: " + r);
+            if (r == 100) {
+                System.out.println("Выпало число 100, давайте на этом закончим");
                 break;
             }
-        }
-
-        for (Integer j: randoms.getList()) {
-            System.out.println(j + "\r");
         }
     }
 }
